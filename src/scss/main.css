@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.App {
+  padding: 30px 50px;
+  background-color: #323a49;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 40vw;
+  min-width: 500px;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.header {
+  color: #52ffa8;
+  font-weight: 100;
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  margin: 1rem 0rem;
+  text-align: center;
+  opacity: 0;
+}
+
+.main {
+  color: #cee3e9;
+  font-weight: 300;
+  margin: 0.5rem 0rem;
+  text-align: center;
+  line-height: 120%;
+  opacity: 0;
+}
+
+.divider {
+  margin: 2rem 0rem;
+  width: 100%;
+  opacity: 0;
+}
+
+.diceContainer {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: #52ffa8;
+  padding: 15px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}
+
+.diceContainer:hover {
+  -webkit-box-shadow: 0px 0px 80px 2px #52ffa8;
+          box-shadow: 0px 0px 80px 2px #52ffa8;
+  cursor: pointer;
+}
+
+.diceContainer:hover .dice {
+  -webkit-transform: rotate(180deg) scale(1.2);
+          transform: rotate(180deg) scale(1.2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dice {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.collapse {
+  -webkit-animation: collapse 0.2s 1 forwards;
+          animation: collapse 0.2s 1 forwards;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  -webkit-animation: show 1s 0.1s 1 forwards;
+          animation: show 1s 0.1s 1 forwards;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes collapse {
+  0% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes collapse {
+  0% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    min-width: 90%;
+    max-width: 90%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
